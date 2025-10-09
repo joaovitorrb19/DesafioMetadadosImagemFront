@@ -1,0 +1,87 @@
+{
+	"_version": "1.12.0",
+
+	"sap.app": {
+		"id": "com.desafio.imagecrud",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "${version}"
+		},
+		"sourceTemplate": {
+			"id": "generator-ui5-app",
+			"version": "1.1.0"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+	 "rootView": {
+		"viewName": "com.desafio.imagecrud.view.App",
+		"type": "XML",
+		"async": true,
+		"id": "app"
+	},
+
+		"dependencies": {
+			"minUI5Version": "1.141.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+
+		"handleValidation": true,
+
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.desafio.imagecrud.i18n.i18n",
+					"supportedLocales": ["en", "de"],
+					"fallbackLocale": "en",
+					"async": true
+				}
+			}
+		},
+
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.desafio.imagecrud.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "main",
+					"target": "main"
+				}
+			],
+			"targets": {
+				"main": {
+					"viewId": "main",
+					"viewName": "Main"
+				}
+			}
+		}
+	}
+}

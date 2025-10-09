@@ -1,0 +1,121 @@
+<mvc:View
+    controllerName="com.desafio.imagecrud.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:unified="sap.ui.unified">
+
+    <VBox class="sapUiSmallMargin">
+        <items>
+            <Button
+                text="Adicionar Imagem"
+                press=".onAbrirUploadDialog"
+                class="sapUiTinyMarginBottom" />
+
+            
+            <Table
+                id="metadadosTable"
+                items="{metadados>/metadados}">
+                
+                <columns>
+                    <Column><Text text="Id"/></Column>
+                    <Column><Text text="Nome do Arquivo"/></Column>
+                    <Column><Text text="Tipo do Arquivo"/></Column>
+                    <Column><Text text="Altura"/></Column>
+                    <Column><Text text="Largura"/></Column>
+                    <Column><Text text="Proporção"/></Column>
+                    <Column><Text text="Data de Criação"/></Column>
+                    <Column><Text text="Ações"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{metadados>id}"/>
+                            <Text text="{metadados>nomeDoArquivo}"/>
+                            <Text text="{metadados>tipoDoArquivo}"/>
+                            <Text text="{metadados>altura}"/>
+                            <Text text="{metadados>comprimento}"/>
+                            <Text text="{metadados>proporcao}"/>
+                             <Text text="{metadados>dataDeCriacao}"/>
+                            <HBox>
+                                <items>
+                                    <Button icon="sap-icon://edit" press=".onPressionarUpdate"/>
+                                    <Button icon="sap-icon://delete" press=".onPressionarDelete"/>
+                                </items>
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+            <Dialog
+                id="uploadDialog"
+                title="Adicionar Imagem"
+                stretch="false">
+                
+                <content>
+                    <unified:FileUploader
+                        id="fileUploader"
+                        name="file"
+                        change=".onSelecionarArquivo"
+                        placeholder="Selecione uma imagem..." />
+                        
+                                       <Text
+                    id="uploadError"
+                    visible="false"
+                    class="sapUiTinyMarginBottom" />
+                        <Text
+                            id="dialogError"
+                            visible="false"/>
+                    <Button
+                        text="Enviar"
+                        press=".onPressionarUpload"/>
+                        <Button
+                        text="Cancelar"
+                        press=".onCancelarUpload"/>
+                </content>
+            </Dialog>
+            <Dialog 
+                id="updateDialog"
+                title="Confirmar Update"
+                type="Message"
+                state="Warning"
+                stretch="false">
+                <content>
+                    <Text text="Id - {update>/Id} - Nome - {update>/NomeDoArquivo} ?"/>
+                        <unified:FileUploader
+                        id="fileUploaderUpdate"
+                        name="file"
+                        change=".onSelecionarArquivo"
+                        placeholder="Selecione uma imagem..." />
+                    <Text text="Tem certeza que deseja atualizar?" />
+                    <Button
+                        text="Sim"      
+                        press=".onConfirmarUpdate"/>
+                    <Button
+                        text="Não"
+                        press=".onCancelarUpdate"/>
+                </content>
+            </Dialog>
+            <Dialog 
+                id="deleteDialog"
+                title="Confirmar Exclusão"
+                type="Message"
+                state="Warning"
+                stretch="false">
+                <content>
+                    <Text text="Tem certeza que deseja excluir o Id - {delete>/Id} - Nome - {delete>/NomeDoArquivo} ?"/>
+                    <Button
+                        text="Sim"      
+                        press=".onConfirmarDelete"/>
+                    <Button
+                        text="Não"
+                        press=".onCancelarDelete"/>
+                </content>
+            </Dialog>
+
+        </items>
+    </VBox>
+
+</mvc:View>

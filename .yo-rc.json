@@ -1,0 +1,19 @@
+{
+  "generator-ui5-app": {
+    "namespace": "com.desafio.imagecrud",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.141.0",
+    "author": "joaovitor.rb19",
+    "initrepo": true,
+    "appId": "com.desafio.imagecrud",
+    "appURI": "com/desafio/imagecrud",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_horizon",
+    "qunitCoverageFile": "qunit-coverage-istanbul.js",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "gte1_120_0": true,
+    "lt1_124_0": false,
+    "setupCompleted": true
+  }
+}
