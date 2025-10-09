@@ -4,6 +4,7 @@
 - Single Page Application da parte visual do CRUD de MetadadosDeImagem
 - Os testes cobrem todas as possibilidades nos metodos Post, Delete, Put, Update, e toda a parte de modais,botoes,validações de arquivos incluindo o formato permitido 
 - As requisições foram feitas com JQuery
+- As requisições em /webapp/test/unit/controller/Main.qunit.js e /webapp/controller/Main.controller.js estão apontando para http://localhost:5050/api/MetadadosDeImagem, modificar se necessário
 
 ## Tecnologias
 - Node 22.20.0
