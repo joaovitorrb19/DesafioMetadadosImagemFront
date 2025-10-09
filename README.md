@@ -8,7 +8,8 @@
 ## Tecnologias
 - Node 22.20.0
 - Npm 10.9.3
-- SAPUI5 > ui 1.0.0
+- SAPUI5 > ui 1.141.0
+- QUnit 2.24.1
 
 ## Localização dos Arquivos
 - /webapp/view/Main.view.xml - Pagina da view SPA do CRUD
