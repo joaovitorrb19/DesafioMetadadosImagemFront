@@ -1,6 +1,5 @@
 # APP SAPUI5 com.desafio.imagecrud
-- Video demonstrando o projeto https://www.youtube.com/watch?v=JHBDohX0Jh8
-- Projeto desenvolvido para o desafio da InventSoftware
+- Projeto desenvolvido para o desafio
 - Single Page Application da parte visual do CRUD de MetadadosDeImagem
 - Os testes cobrem todas as possibilidades nos metodos Post, Delete, Put, Update, e toda a parte de modais,botoes,validações de arquivos incluindo o formato permitido 
 - As requisições foram feitas com JQuery
@@ -18,7 +17,7 @@
 - /webapp/controller/Main.controller.js - Arquivo contendo todo o codigo do CRUD
 
 ## Rodar o App
-  git clone https://github.com/joaovitorrb19/DesafioInventSoftwareFront.git
+  git clone https://github.com/joaovitorrb19/DesafioMetadadosImagemAPI.git
 
 ### Iniciar o servidor de desenvolvimento localmente
     npm update
